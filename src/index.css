@@ -149,3 +149,12 @@ body{background:var(--bg)}
 .owasp-card p{margin-bottom:0}
 .owasp-card:hover{border-color:#191813}
 .pipeline-card:hover,.audience-card:hover,.download-card:hover,.owasp-card:hover{border-color:#191813}
+.pipeline-art{width:84px;height:76px;margin:5px 0 3px;overflow:hidden;display:flex;align-items:center;justify-content:center;filter:drop-shadow(0 5px 6px rgba(25,24,19,.11));transition:transform .3s ease}
+.pipeline-art img{display:block;width:64px;height:128px;max-width:none;object-fit:fill;flex:0 0 auto}
+.pipeline-card:hover .pipeline-art{transform:translateY(-3px) scale(1.06)}
+.owasp-top{min-height:61px;align-items:flex-start}
+.owasp-art{width:66px;height:66px;object-fit:contain;flex:0 0 auto;margin:-12px -8px 0 0;filter:drop-shadow(0 5px 5px rgba(25,24,19,.13));transition:transform .3s ease}
+.owasp-card:hover .owasp-art{transform:translateY(-3px) rotate(-4deg) scale(1.07)}
+.owasp-card h3{margin-top:5px}
+@media(max-width:520px){.pipeline-art{width:78px;height:70px;margin:3px 0 2px}.pipeline-art img{width:60px;height:120px}.owasp-top{min-height:53px}.owasp-art{width:54px;height:54px;margin:-8px -5px 0 0}}
+@media(prefers-reduced-motion:reduce){.pipeline-art,.owasp-art{transition:none}}
