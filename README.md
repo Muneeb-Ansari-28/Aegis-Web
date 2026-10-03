@@ -1,4 +1,4 @@
-﻿# Aegis Website
+# Aegis Website
 
 Aegis is a static marketing and distribution website for a defensive LLM vulnerability scanner. It introduces the desktop product, explains how its authorized black-box assessments work, shows honest OWASP coverage, and provides download information when releases are available.
 
@@ -39,7 +39,7 @@ The single-page site is ordered as follows:
 5. **Local-first:** Local attack, judge, and assistant models; data stays on the machine; deterministic scoring.
 6. **Audience:** Students and researchers, plus security teams and developers.
 7. **Stats:** OWASP LLM categories, black-box assessment, local-model cost, and PDF reports. Keep figures accurate to the current build.
-8. **OWASP coverage:** Ten LLM Top 10 categories with honest covered, partial, or not-black-box-testable statuses.
+8. **OWASP coverage:** Ten LLM Top 10 category codes, names, and descriptions; this section does not display scanability or coverage statuses.
 9. **Lab environment:** Prompt-injection practice scenario.
 10. **Downloads:** Windows, macOS, and Linux cards, requirements, checksums, and authorized-testing notice. Unreleased values remain `TBD`.
 11. **Documentation:** Installation, first scan, risk scores, assistant guide, and FAQ links.
@@ -85,7 +85,7 @@ Important files:
 ## Maintenance rules
 
 - Keep marketing copy in `src/content/copy.ts`; keep deployment links and release metadata in `src/config/site.ts`.
-- Preserve the authorized-testing disclaimer and honest OWASP coverage states.
+- Preserve the authorized-testing disclaimer and keep OWASP cards focused on category information.
 - Prefer original Aegis artwork and truthful product descriptions.
 - Respect `prefers-reduced-motion`; provide a usable static fallback for WebGL.
 - Keep this as a static marketing and distribution site. Do not introduce fake-live links or claims.

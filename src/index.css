@@ -146,3 +146,6 @@ body{background:var(--bg)}
 .local-orbit-track{pointer-events:none}
 .local-orbit-label{pointer-events:auto}
 .local-tag:after{content:'';position:absolute;inset:-8px;border-radius:8px}
+.owasp-card p{margin-bottom:0}
+.owasp-card:hover{border-color:#191813}
+.pipeline-card:hover,.audience-card:hover,.download-card:hover,.owasp-card:hover{border-color:#191813}
