@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import { useReducedMotion } from 'framer-motion'
-import { Terminal } from 'lucide-react'
+import { LockKeyhole, Terminal } from 'lucide-react'
 import { terminalScript } from '../content/copy'
 
 export function TerminalWindow() {
@@ -58,5 +58,5 @@ export function TerminalWindow() {
     return () => { stopped = true; window.clearTimeout(timer) }
   }, [reduced, visible])
 
-  return <div ref={terminal} className="terminal-window"><div className="terminal-top"><div className="lights"><i/><i/><i/></div><span><Terminal size={13}/> aegis@scan : ~/target-01</span><span className="terminal-live"><i/> LIVE</span></div><div className="terminal-content" aria-live="off">{lines.map((line, index) => <div key={index} className={`term-line ${line.includes('VULNERABLE') ? 'bad' : line.includes('PASS') ? 'good' : line.startsWith('aegis') ? 'prompt' : ''}`}><span className="line-num">{String(index + 1).padStart(2, '0')}</span><span>{line}{activeLine === index && <span className="cursor" aria-hidden="true">▍</span>}</span></div>)}{lines.length === 0 && <div className="terminal-wait">Initializing local scan environment<span className="cursor">_</span></div>}</div><div className="terminal-foot"><span><span className="dot-good"/> 4 agents active</span><span>LOCAL MODE <span className="terminal-lock">⌑</span></span></div></div>
+  return <div ref={terminal} className="terminal-window"><div className="terminal-top"><div className="lights"><i/><i/><i/></div><span><Terminal size={13}/> aegis@scan : ~/target-01</span><span className="terminal-live"><i/> LIVE</span></div><div className="terminal-content" aria-live="off">{lines.map((line, index) => <div key={index} className={`term-line ${line.includes('VULNERABLE') ? 'bad' : line.includes('PASS') ? 'good' : line.startsWith('aegis') ? 'prompt' : ''}`}><span className="line-num">{String(index + 1).padStart(2, '0')}</span><span>{line}{activeLine === index && <span className="cursor" aria-hidden="true">█</span>}</span></div>)}{lines.length === 0 && <div className="terminal-wait">Initializing local scan environment<span className="cursor">_</span></div>}</div><div className="terminal-foot"><span><span className="dot-good"/> 5 pipeline stages</span><span>LOCAL MODE <LockKeyhole className="terminal-lock" size={10}/></span></div></div>
 }
